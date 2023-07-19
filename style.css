@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #414141;
+}
+.social_icon {
+  list-style: none;
+  margin: 1em;
+}
+.social_icon li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+}
+.social_icon i {
+  color: #ffff;
+  position: absolute;
+  top: 20px;
+  left: 21px;
+  transition: all 265ms ease-out;
+}
+.social_icon a {
+  display: inline-block;
+}
+.social_icon a::before {
+  transform: scale(1);
+  content: " ";
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #ff003c, #c648c8);
+}
+.social_icon a:hover::before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+.social_icon a:hover i {
+  transform: scale(2.2);
+  color: #ff003c;
+  background: linear-gradient(45deg, #ff003c, #c648c8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
